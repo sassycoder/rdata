@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="no-js ie ltie10 ltie9 ltie8 ltie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js ie ltie10 ltie9 ltie8 gtie6 gtie5 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js ie ltie10 ltie9 gtie7 gtie6 gtie5 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js ie ltie10 gtie8 gtie7 gtie6 gtie5 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<script type="text/javascript">document.documentElement.className = document.documentElement.className.replace('no-js ','no-js').replace('no-js','');</script>
+	    <title>Rhapsody Ltd | ePublish</title>
+		<meta charset="utf-8">
+		<meta content="" name="keywords">
+	  <meta content="" name="description">
+		<!-- <meta name="viewport" content="width=device-width, maximum-scale=1.0" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	
+	    <!-- CSS -->
+		<link type="text/css" rel="stylesheet" href="assets/css/main.css">
+	  <link type="text/css" rel="stylesheet" href="assets/css/print.css" media="print">
+	
+	    <!-- Must live here to provide html5 shiv in IE8 -->
+			<!-- <script src="assets/js/lib/single/modernizr-2.8.3.js"></script> -->
+	
+	    <!--[if lt IE 9]>    	
+			<script src="assets/js/lib/single/respond.min.js"></script>
+		<![endif]-->
+		
+</head>
+
+<body class="login">
+<div><a href="#skipnav" class="skip">Skip to main content</a></div>
+
+	<div id="wrapper" class="wrapper">
+
+		<header class="cf fixed">
+			<div class="row">
+				<div class="pane base12">
+					<div class="pane left heading-strap">
+						<h1>Rhapsody <span>Data Services</span></h1>
+					</div>
+					<div class="pane right heading-links">
+						<a href="#">Support</a>
+						<a href="#">Contact</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="pane base12">
+					<a href="/" class="logo">Rhapsody Orchestrated Media</a>
+				</div>
+			</div>
+		</header><!-- end header -->
+		
+		<div class="actions">
+			<a href="#" class="toggle-grid">Toggle grid</a>
+		</div>
+
+			<div class="main off-area">
+			    <a id="skipnav" tabindex="-1"></a>
+			    		    	
+			    	<div class="login-box">
+			    		<h3>Sign In</h3>
+
+			    		<div class="inner cf">
+			    			<div class="row">
+				    			<label for="email">Email: <span>(required)</span></label>
+				    			<input type="text" name="email" id="email">
+				    		</div>
+				    		<div class="row">
+				    			<label for="email">Password: <span>(required)</span></label>
+				    			<input type="password" name="password" id="password">
+				    		</div>
+				    		<div class="row">
+				    			<button type="submit" class="bttn primary">
+				    				Sign In
+				    			</button>
+				    		</div>
+				    		<div class="row">
+				    			<p><a href="password.html">Forgot Password?</a></p>
+				    		</div>			    		
+			    		</div>			    		
+			    	</div>	    	
+
+			</div><!-- .main -->
+			<div class="push"></div>	
+	</div><!-- .wrapper -->
+	<footer>
+  	<p>Copyright &copy; 2015 Rhapsody Media. All rights reserved.</p>
+	</footer>
+	
+	<script type="text/javascript" src="assets/js/lib.js"></script>
+	<script type="text/javascript" src="assets/js/framework.min.js"></script>
+	<script type="text/javascript" src="assets/js/components.min.js"></script>
+
+	<script type="text/javascript">
+	'use strict';
+		$(function () {
+			var $doc = $(document),
+					$treeParent = $('.parent'),
+					$filesLink = $('.show-files'),
+					$newProjectLink = $('.new-project'),
+					$modalWindow = $('#alimir_bootmodal'),
+					$addProjectBtn = $('#addProject'),
+
+					toggleTree = function (e) {
+						var $thisParent = $(this).parent();
+
+						if ($thisParent.has('ul').length) {
+							$thisParent.toggleClass('open');
+						}
+						e.preventDefault();
+					},
+
+					showFiles = function (e) {
+						var $this = $(this);
+
+						if ($this.hasClass('active')) {
+							return
+						} else {											
+							/* Insert Call: get files */
+
+							$filesLink.removeClass('active');
+							$this.addClass('active');
+						}				
+						e.preventDefault();						
+					},
+
+					openModal = function (e) {
+						$('.tab-content #login_tab').addClass('active fade in');
+						$modalWindow.modal('show');
+						e.preventDefault();
+					},
+
+					newProject = function (e) {
+						var projectName = $('#project').val(),
+								$validation = $('.error');
+
+						if (projectName.length) {
+							$('#project').val('');
+							$modalWindow.modal('hide');
+							console.log('created project: ' + projectName);
+							/* Insert Call: create new project */
+
+						} else {
+							$modalWindow.addClass('animated shake');
+							$('#project').focus();
+						}					
+						e.preventDefault();
+					},
+
+					modalOpenActions = function () {
+						$(this).find($('#project')).focus();
+					};
+
+			/* show/collapse tree items */
+			$treeParent.on('click', toggleTree);
+
+			/* Show files */
+			$filesLink.on('click', showFiles);
+
+			/* Open modal */
+			$newProjectLink.on('click', openModal);
+
+			/* Create new project */
+			$addProjectBtn.on('click', newProject);
+
+			/* Once modal is open, focus text field */
+			$modalWindow.on('shown.bs.modal', modalOpenActions);
+
+
+			/* Close all children nodes on page load */
+			$('.tree > li ').removeClass('open');
+		});
+
+	</script>
+
+		<div id="alimir_bootmodal" class="modal fade" tabindex="-1" data-width="540" data-backdrop="static" data-keyboard="false" style="display: none;">
+			<div class="tab-content">
+				<div class="tab-pane active fade in" id="login_tab">
+				  <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal">&#215;</button>
+				    <h3>New Project</h3>
+				  </div>
+				  <div class="modal-body">
+				    <div class="status"></div>
+				    <div class="row-fluid control-group">
+				    	<label>
+				    		Name of project
+				    	</label>
+				    	<p class="error">Please enter a name</p>
+				      <label>
+				      	<input type="text" name="project" id="project" class="span12" value=""/>
+				      </label>
+				    </div>
+			    </div>
+			    <div class="modal-footer">
+			    	 <a href="#" class="modal-cancel" data-dismiss="modal">Cancel</a>
+			      <a name="addProject" id="addProject" class="bttn primary" data-loading-text="loading...">Add Project</a>
+			     
+			    </div>
+		    </div>				
+			</div>
+		</div>
+
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>     <html class="no-js ie ltie10 ltie9 ltie8 ltie7 ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js ie ltie10 ltie9 ltie8 gtie6 gtie5 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js ie ltie10 ltie9 gtie7 gtie6 gtie5 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js ie ltie10 gtie8 gtie7 gtie6 gtie5 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+	<!--(bake /templates/structure/html-header.html)-->
+</head>
+
+<body class="wpp">
+<div><a href="#skipnav" class="skip">Skip to main content</a></div>
+<div class="actions">
+	<a href="#" class="toggle-grid">Toggle grid</a>
+<!-- 	<a href="#" class="toggle-grid-type">Toggle gutters</a> -->
+</div>
+
+<div class="wrapper">
+
+	<!--(bake /templates/structure/header.html)-->
+
+	<div class="main">
+    <a id="skipnav" tabindex="-1"></a>
+
+    <div class="row">
+			<div class="pane base12 component-header">
+
+				<!-- START: COMPONENT DETAILS -->
+				<h2>Component: Style guide</h2>
+
+				<p><strong>Description:</strong> Styles used throughout the site</p>
+				<!-- END: COMPONENT DETAILS -->
+
+			</div><!-- .pane -->
+		</div>
+
+    <div class="row">
+    	<div class="pane base6">
+    		<br>
+    		<h1>Heading 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+        <h2>Heading 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+        <h3>Heading 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+        <h4>Heading 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        
+        <p>Paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="body-large">Paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    	</div>
+    </div>
+
+	</div><!-- .main -->
+	<div class="push"></div> <!-- For sticky footer -->
+</div><!-- .wrapper -->
+
+		<!--(bake /templates/structure/footer.html)-->
+
+		<div id="alimir_bootmodal" class="modal fade" tabindex="-1" data-width="370" data-backdrop="static" data-keyboard="false" style="display: none;">
+		<div class="tab-content">
+		<div class="tab-pane active fade in" id="login_tab">		
+		<form id="login" action="login" method="post">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&#215;</button>
+    <h3>Log-in</h3>
+  </div>
+  <div class="modal-body">
+    <div class="status"></div>
+    <div class="row-fluid control-group">
+      <label>        <input type="text" name="username" id="username" class="span12" value="" placeholder="Email Address"/></label>
+        <label>          <input type="password" name="password" id="password" class="span12" value="" placeholder="Password"/></label>
+
+            <label class="checkbox pull-left">
+              <input name="rememberme" type="checkbox" id="rememberme" value="forever">Remember Me            </label>
+            <span class="forgot-pass pull-right"><a href="#lostpass_tab" data-toggle="tab">Forgot Password?</a></span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" name="submit" id="wp-submit" class="btn btn-primary btn-large btn-block" data-loading-text="loading...">LOG-IN</button>
+                      <span class="register-link"><a href="#register_tab" data-toggle="tab">Not Registered? Sign up for an account.</a></span>
+                  </div>
+        <input type="hidden" id="security" name="security" value="41ad8e9bc8" /><input type="hidden" name="_wp_http_referer" value="/" />      </form>		</div>
+				<div class="tab-pane fade in" id="register_tab">		
+		<form action="register" id="regform" method="post" name="regform">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal" type=
+        "button">&#215;</button>
+
+        <h3>Sign Up</h3>
+    </div>
+
+    <div class="modal-body">
+        <span>Complete the fields below. You will recieve a confirmation
+        email once your account is activated.</span>
+
+        <div class="status"></div>
+
+        <div class="row-fluid control-group">
+            <label>
+              <input class="span12" id="first_name" name="first_name" placeholder="First Name" type="text" value="">
+            </label>
+            <label>
+              <input class="span12" id="surname" name="surname" placeholder="Surname" type="text" value="">
+            </label>
+            <label>
+              <input class="span12" id="publication" name="publication" placeholder="Publication" type="text" value="">
+            </label>
+            <label>
+              <input class="span12" id="job_title" name="job_title" placeholder="Job Title" type="text" value="">
+            </label>
+            <label>
+              <input class="span12" id="user_login" name="user_login" placeholder="Email Address" type="text" value="">
+            </label>
+            <label>
+            <input class="span12"  id="user_pass" name="user_pass" placeholder="Your Password" type="password" value="">
+          </label>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button class=
+        "btn btn-primary btn-large btn-block"
+        data-loading-text="loading..." id=
+        "pass-submit" name="pass-sumbit" type=
+        "submit">SIGN UP</button> <input name=
+        "register" type="hidden" value="true">
+    </div><input type="hidden" id="security2" name="security2" value="2e5763299f" /><input type="hidden" name="_wp_http_referer" value="/" /></form>		</div>
+				<div class="tab-pane fade in" id="lostpass_tab">		
+		<form id="passform" action="lostpassword" method="post">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&#215;</button>
+    <h3>Reset Password</h3>
+  </div> 
+  <div class="modal-body">
+  <p class="alert" data-alert="alert">Enter the email address associated with your account</p>
+  	<div class="status"></div>
+    <div class="row-fluid control-group">
+		<label>        <input type="text" name="lost_pass" id="lost_pass" class="span12" value="" placeholder="Username or Email"/></label>
+    </div>
+  </div>
+  <div class="modal-footer">
+        <button type="submit" name="user-sumbit" id="user-submit" class="btn btn-primary btn-large btn-block" data-loading-text="loading...">SEND RESET LINK</button>
+		<input type="hidden" name="forgotten" value="true" />
+  </div>
+   <input type="hidden" id="security3" name="security3" value="2e5763299f" /><input type="hidden" name="_wp_http_referer" value="/" /></form>		</div>
+		</div>
+		</div>
+	</body>
+</html>

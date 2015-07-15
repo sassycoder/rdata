@@ -1,0 +1,122 @@
+//@extend-elements
+//original selectors
+//.rich-text .table-default table th, .rich-text .table-default table td
+%extend_1 {
+		padding: 18px 14px 14px;
+		font-size: 12px;
+		font-size: 1.2rem;
+}
+
+.rich-text {
+		ul {
+				list-style-type: disc;
+				margin-left: 14px;
+				line-height: 22px;
+				line-height: 2.2rem;
+				ul {
+						padding-top: 9px;
+				}
+				ol {
+						padding-top: 9px;
+				}
+		}
+		ol {
+				margin-left: 20px;
+				line-height: 22px;
+				line-height: 2.2rem;
+				ul {
+						padding-top: 9px;
+				}
+				ol li {
+						list-style-type: lower-alpha;
+				}
+		}
+		img {
+				margin: 4px 0 27px;
+				float: left;
+		}
+		.image-left {
+				margin: 4px 22px 0 0;
+				float: left;
+				max-width: 300px;
+				img {
+						margin-bottom: 16px;
+				}
+		}
+		.image-right {
+				margin: 4px 0 0 22px;
+				float: right;
+				max-width: 300px;
+				height: auto;
+				img {
+						margin-bottom: 16px;
+				}
+		}
+		.table-default table {
+				border: 1px solid #33465c;
+				padding: 0;
+				margin: 10px 0 30px;
+				caption {
+						padding: 0;
+						padding-bottom: 10px;
+				}
+				th {
+						@extend %extend_1;
+						background-color: orange;
+						border-bottom: 1px solid #33465c;
+				}
+				td {
+						@extend %extend_1;
+				}
+				tr {
+						background-color: #fff;
+						&:nth-of-type(odd) {
+								background-color: #fff;
+								td {
+										border-right: 1px solid #33465c;
+										border-bottom: 1px solid #33465c;
+								}
+						}
+						td {
+								border-right: 1px solid #33465c;
+								border-bottom: 1px solid #33465c;
+						}
+				}
+		}
+}
+
+.text-placeholder {
+		background: #fff;
+}
+
+@media all and(max-width: 767px) {
+		.rich-text {
+				.table-default {
+						position: relative;
+						table {
+								border: 0;
+								margin-top: 30px;
+								caption {
+										border-right: 0;
+										position: absolute;
+										top: 0;
+								}
+								thead tr {
+										border-top: 1px solid #33465c;
+										border-left: 1px solid #33465c;
+										th:last-child {
+												border-bottom: 1px solid #33465c;
+										}
+								}
+								tbody tr {
+										border-top: 1px solid #33465c;
+								}
+						}
+				}
+				.image-left, .image-right  {
+						float: none;
+						margin: 0;
+						max-width: 100%;
+				}
+		}
+}

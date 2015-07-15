@@ -1,0 +1,55 @@
+/*
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+≡≡≡≡≡≡                                                                                                      ≡≡≡≡≡≡≡≡≡≡≡≡
+≡≡≡≡≡≡   TYPOGRAPHY                                                                                        ≡≡≡≡≡≡≡≡≡≡≡≡
+≡≡≡≡≡≡                                                                                                    ≡≡≡≡≡≡≡≡≡≡≡≡
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+/*
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+≡≡≡≡≡≡   FONT FACE                                                              ≡≡≡≡≡≡≡≡≡≡≡≡
+≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈
+*/
+
+@font-face {
+  font-family: 'BlackTieSolid';
+  src: url('../fonts/BlackTie-Solid-webfont.eot?v=1.0.0');
+  src: url('../fonts/BlackTie-Solid-webfont.eot?#iefix&v=1.0.0') format('embedded-opentype'), url('../fonts/BlackTie-Solid-webfont.woff2?v=1.0.0') format('woff2'), url('../fonts/BlackTie-Solid-webfont.woff?v=1.0.0') format('woff'), url('../fonts/BlackTie-Solid-webfont.ttf?v=1.0.0') format('truetype'), url('../fonts/BlackTie-Solid-webfont.svg?v=1.0.0#black_tiesolid') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BlackTieBold';
+  src: url('../fonts/BlackTie-Bold-webfont.eot?v=1.0.0');
+  src: url('../fonts/BlackTie-Bold-webfont.eot?#iefix&v=1.0.0') format('embedded-opentype'), url('../fonts/BlackTie-Bold-webfont.woff2?v=1.0.0') format('woff2'), url('../fonts/BlackTie-Bold-webfont.woff?v=1.0.0') format('woff'), url('../fonts/BlackTie-Bold-webfont.ttf?v=1.0.0') format('truetype'), url('../fonts/BlackTie-Bold-webfont.svg?v=1.0.0#black_tiebold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'BlackTieRegular';
+  src: url('../fonts/BlackTie-Regular-webfont.eot?v=1.0.0');
+  src: url('../fonts/BlackTie-Regular-webfont.eot?#iefix&v=1.0.0') format('embedded-opentype'), url('../fonts/BlackTie-Regular-webfont.woff2?v=1.0.0') format('woff2'), url('../fonts/BlackTie-Regular-webfont.woff?v=1.0.0') format('woff'), url('../fonts/BlackTie-Regular-webfont.ttf?v=1.0.0') format('truetype'), url('../fonts/BlackTie-Regular-webfont.svg?v=1.0.0#black_tieregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinionProRegular';
+    src: url('../fonts/MinionPro-Regular.otf') format('opentype')
+}
+
+@font-face {
+    font-family: 'LatoRegular';
+    src: url('../fonts/Lato-Regular.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'LatoBlack';
+    src: url('../fonts/Lato-Black.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'LatoBold';
+    src: url('../fonts/Lato-Bold.ttf') format('truetype')
+}

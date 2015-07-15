@@ -1,0 +1,332 @@
+/*!
+ * Bootstrap Modal
+ *
+ * Copyright Jordan Schroter
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+#passform .modal-body .status {
+  height: auto!important;
+}
+
+
+.label a{
+  color:#fff !important;
+}
+ 
+.modal-open {
+  overflow: hidden;
+}
+
+
+/* add a scroll bar to stop page from jerking around */
+.modal-open.page-overflow .page-container,
+.modal-open.page-overflow .page-container .navbar-fixed-top,
+.modal-open.page-overflow .page-container .navbar-fixed-bottom,
+.modal-open.page-overflow .modal-scrollable {
+  overflow-y: scroll;
+}
+
+@media (max-width: 979px) {
+  .modal-open.page-overflow .page-container .navbar-fixed-top,
+  .modal-open.page-overflow .page-container .navbar-fixed-bottom  {
+    overflow-y: visible;
+  }
+}
+
+
+.modal-scrollable {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+}
+
+.modal {
+  outline: none;
+  position: absolute;
+  margin-top: 0;
+  top: 50%;
+  overflow: visible; /* allow content to popup out (i.e tooltips) */
+
+  &.alternative {
+    background-color: #fff;
+    color: #000;
+
+    .modal-header h3 {
+      color: #000;
+    }
+    .modal-body {
+      color: #000;
+    }
+  }
+
+  label {
+    margin-bottom: 20px;
+  }
+}
+
+.modal.fade {
+  top: -100%;
+  -webkit-transition: opacity 0.3s linear, top 0.3s ease-out, bottom 0.3s ease-out, margin-top 0.3s ease-out; 
+     -moz-transition: opacity 0.3s linear, top 0.3s ease-out, bottom 0.3s ease-out, margin-top 0.3s ease-out;
+       -o-transition: opacity 0.3s linear, top 0.3s ease-out, bottom 0.3s ease-out, margin-top 0.3s ease-out;
+          transition: opacity 0.3s linear, top 0.3s ease-out, bottom 0.3s ease-out, margin-top 0.3s ease-out;
+}
+
+.modal.fade.in {
+  top: 50%;
+}
+
+.modal-body {
+  max-height: none;
+  overflow: visible;
+}
+
+.modal.modal-absolute {
+  position: absolute;
+  z-index: 950;
+}
+
+.modal .loading-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 6px;
+}
+
+.modal-backdrop.modal-absolute{
+  position: absolute;
+  z-index: 940;
+}
+
+.modal-backdrop, 
+.modal-backdrop.fade.in{
+  opacity: 0.8;
+  filter: alpha(opacity=70);
+}
+
+.modal.container {
+  width: 940px;
+  margin-left: -470px;
+}
+
+/* Modal Overflow */
+
+.modal-overflow.modal {
+  top: 1%;
+}
+
+.modal-overflow.modal.fade {
+  top: -100%;
+}
+
+.modal-overflow.modal.fade.in {
+  top: 1%;
+}
+
+.modal-overflow .modal-body {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive */
+
+@media (min-width: 1200px) {
+  .modal.container {
+    width: 1170px;
+    margin-left: -585px;
+  }
+}
+
+@media (max-width: 979px) {
+  .modal, 
+  .modal.container,
+  .modal.modal-overflow   {
+    top: 1%;
+    right: 1%;
+    left: 1%;
+    bottom: auto;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    // padding: 0 !important;
+  }
+  
+  .modal.fade.in, 
+  .modal.container.fade.in,
+  .modal.modal-overflow.fade.in {
+    top: 3%;
+    bottom: auto;
+    right: 4%;
+    left: 4%;
+  }
+  
+  .modal-body,
+  .modal-overflow .modal-body {
+    position: static;
+    margin: 0;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  .modal-footer,
+  .modal-overflow .modal-footer {
+    position: static;
+  }
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -12px 0 0 -12px;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 18px 0 15px;
+
+  &.shake {
+    .error { display: block; }
+    #project {
+      border: 1px solid red;
+    }
+  }
+
+  &.zoomIn {
+    -webkit-animation-duration:0.3s;animation-duration:0.3s;
+  }
+}
+
+.modal a {
+  // color: #000;
+}
+
+.modal .row-fluid [class*=span],
+.modal [type='text'] {
+  min-height: 40px;
+}
+
+.modal-header {
+    padding: 0 15px;
+    border: none;
+}
+
+.modal-header h3 {
+    // margin: 0 0 10px 0;
+    // padding-top: 5px;
+    // font-family: 'WaitroseBold';
+    // font-size: 36px;
+    // font-size: 3.6rem;
+    // line-height: 43px;
+    // line-height: 4.3rem;
+    // color: #fff;
+    // text-align: center;
+    // letter-spacing: .1rem;
+    // letter-spacing: 1px;
+}
+
+.modal-body {
+    // max-height: 400px;
+    // padding: 0 15px;
+    // font-size: 16px;
+    // font-size: 1.6rem;
+    // line-height: 17px;
+    // line-height: 1.7rem;    
+    // border: none;
+    background-color: rgba($rhapsodyBlue, 0.1);
+
+    .error {
+      color: red;
+      display: none;      
+    }
+}
+
+.modal-body .pull-left {
+  float: left;
+}
+
+.modal-body span {
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+
+    &.forgot-pass {
+      text-align: left;
+      float: right;
+    }
+}
+
+.modal-footer {
+    padding: 15px 15px 0;
+    background-color: transparent;
+    border-top: none;
+    box-shadow: none;
+    text-align: right;
+    color: #000;
+
+    .register-link {
+      margin-top: 8px;
+      padding: 0 20px;
+      display: block;
+      font-size: 12px;
+      font-size: 1.2rem;
+    }
+
+    .bttn {
+      padding: 12px 32px 8px;
+    }
+
+    .modal-cancel {
+      font-size: 13px;
+      font-size: 1.3rem;
+      line-height: 32px;
+      line-height: 3.2rem;
+      margin-right: 30px;
+    }
+}
+
+.modal-header .close {
+  margin-top: 0;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-shadow: none;
+  background-color: $rhapsodyBlue;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  color: #fff;
+  font-size: 36px;
+  border-radius: 20px;
+  line-height: 20px;
+  z-index: 99;
+  padding: 6px 9px 11px;
+  transition: all 0.4s ease;
+
+  &:hover, &:active, &:focus {
+    background-color: $grey;
+  }
+}
+
+.btn-primary {
+  color: #000;
+  text-shadow: none;
+  background-color: #fdb813;
+  background-image: none;
+  border: none;
+  font-family: "WaitroseBold";
+  letter-spacing: 1px;
+  letter-spacing: .1rem;
+
+  &:hover, &:focus, &:active {
+    background-color: #fdb813;
+  }
+}
