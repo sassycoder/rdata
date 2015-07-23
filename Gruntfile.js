@@ -51,8 +51,7 @@ module.exports = function (grunt) {
 
     concat: {
       components: {
-        src: ['assets/js/components/*.js',
-              'assets/js/templates.js'],
+        src: ['assets/js/components/*.js'],
         dest: 'dist/assets/js/components.js'
       },
       framework: {
@@ -60,7 +59,7 @@ module.exports = function (grunt) {
         dest: 'dist/assets/js/framework.js'
       },
       library: {
-        src: ['assets/js/lib/single/jquery-2.1.1.js',
+        src: [
               'assets/js/lib/*.js'],
         dest: 'dist/assets/js/lib.js'
       }
@@ -69,9 +68,9 @@ module.exports = function (grunt) {
     uglify: {
       dist: {
         files: {
-          'dist/assets/js/components.min.js': 'assets/js/components.js',
-          'dist/assets/js/framework.min.js': 'assets/js/framework.js',
-          'dist/assets/js/lib.min.js': 'assets/js/lib.js'
+          'dist/assets/js/components.min.js': 'dist/assets/js/components.js',
+          'dist/assets/js/framework.min.js': 'dist/assets/js/framework.js',
+          'dist/assets/js/lib.min.js': 'dist/assets/js/lib.js'
         }
       }
     },

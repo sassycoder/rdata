@@ -250,12 +250,14 @@ select:hover,select:focus,select:active {
 }
 
 div.error-message {
-    background: #f9faee;
-    border: 1px solid #BECF00;
+    background: rgba($rhapsodyBlue, 0.1);
+    border: 1px solid $rhapsodyBlue;
     color: #ff0000;
     margin-bottom: 15px;
     padding: 8px;
     display: none;
+    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 div.error-message ul {

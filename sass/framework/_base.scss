@@ -384,7 +384,7 @@ ul li,ol li {
   }
 }
 
-.login-box {
+.login-box, .forgot-password-box {
   width: 540px;
   display: inline-block;
   text-align: left;
@@ -652,20 +652,21 @@ a.skip:active,a.skip:focus {
 }
 
 .loader {
-  background: url('/assets/img/structure/loader.gif') no-repeat center #fff;
+  background: url("/assets/img/structure/loader.gif") no-repeat center;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  transition: 0.5s all ease;
-  opacity: 0;
-  z-index: -1;
+  background-color: rgba(0,0,0,0.1);
+  margin: 0!important;
+  padding: 0!important;
+  z-index: 999;
+  display: none;
 }
 
 .loading .loader {
-  opacity: 1;
-  z-index: 1;
+  display: block;
 }
 
 .wrapper>header:before,.wrapper>header:after {
@@ -730,7 +731,7 @@ footer {
 
 
 @media (max-width: 767px) {
-  .login-box {
+  .login-box, .forgot-password-box {
     width: 100%;
     display: inline-block;
     text-align: left;

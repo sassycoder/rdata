@@ -18,6 +18,7 @@ $.responsive.device()       mobile | tablet | desktop
 */
 
 'use strict';
+$ ? {} : $ = jQuery;
 
 $.responsive = {
     width1: 1280,
@@ -271,7 +272,7 @@ $.enable.IE7HoverFocus(true);
 
 $(function () {
     $('html').addClass('images-off');
-    $('<img src="./assets/img/structure/pixel.png' + '#' + Math.random() + '"/>').load(function() {
+    $('<img src="http://134.213.146.151/dataservices/wp-content/themes/rhapsody-data-services/assets/img/structure/pixel.png' + '#' + Math.random() + '"/>').load(function() {
         $('html').removeClass('images-off');
     });
 });
