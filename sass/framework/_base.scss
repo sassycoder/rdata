@@ -312,6 +312,7 @@ ul {
         cursor: auto;
 
         p {
+          width: 75%;
           &:before {
             content: '';
           }
@@ -384,7 +385,7 @@ ul li,ol li {
   }
 }
 
-.login-box, .forgot-password-box, .reset-password-box {
+.login-box, .forgot-password-box, .reset-password-box, .set-password-box {
   width: 540px;
   display: inline-block;
   text-align: left;
@@ -731,6 +732,17 @@ footer {
 
 
 @media (max-width: 767px) {
+
+  ul.tree {
+    &.files {
+      li {
+        > p {
+          width: 58%;
+        }
+      }
+    }
+  }
+
   .login-box, .forgot-password-box {
     width: 100%;
     display: inline-block;
@@ -751,4 +763,19 @@ footer {
       width: 100%;
     }
   }
+}
+
+@media (max-width: 414px) {
+  ul.tree {
+    &.files {
+      li {
+        > p {
+          width: 40vw;
+          overflow: visible;
+          white-space: normal;
+        }
+      }
+    }
+  }
+
 }
