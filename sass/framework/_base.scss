@@ -16,6 +16,7 @@ $lightBlue: #a5c3c9;
 $rhapsodyBlue: #a5c3c9;
 $grey: #999999;
 $green: yellowgreen;
+$yellow: #EBC20E;
 
 
 * {
@@ -360,7 +361,8 @@ ul li,ol li {
 .delete,
 .download,
 .received,
-.query {
+.query,
+.complete {
   float: right;
   line-height: 32px;
   line-height: 3.2rem;
@@ -386,7 +388,8 @@ ul li,ol li {
 
 .in-progress,
 .received,
-.query {
+.query,
+.complete {
   float: left;
   margin: 0 2px;
 }
@@ -416,11 +419,11 @@ ul li,ol li {
 .received {  
   &:before {
     content: '\F042';
-    color: $green;
+    color: $yellow;
   }
 
   &:hover, &:focus, &:active {
-    &:before { color: $green; }
+    &:before { color: $yellow; }
   }
 }
 
@@ -432,6 +435,17 @@ ul li,ol li {
 
   &:hover, &:focus, &:active {
     &:before { color: $red; }
+  }
+}
+
+.complete {
+  &:before {
+    content: '\F013';
+    color: $green;
+  }
+
+  &:hover, &:focus, &:active {
+    &:before { color: $green; }
   }
 }
 
