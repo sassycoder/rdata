@@ -321,6 +321,10 @@ ul {
         font-family: 'LatoRegular';
         cursor: auto;
 
+        &.active {
+           p { font-family: 'LatoBold'; }
+        }
+
         div {
           display: inline-block;
           min-width: 46px;
